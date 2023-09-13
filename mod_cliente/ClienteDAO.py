@@ -41,7 +41,7 @@ def get_cliente(id: int):
 def post_cliente(corpo: Cliente):
     try:
         session = db.Session()
-        dados = ClienteDB(None, corpo.nome, corpo.cpf, corpo.telefone, corpo.compra_fiado, corpo.senha)
+        dados = ClienteDB(None, corpo.nome, corpo.cpf, corpo.telefone, corpo.compra_fiado, corpo.dia_fiado, corpo.senha)
         session.add(dados)
         session.commit()
         return {"id": dados.id_cliente}, 200
@@ -55,7 +55,7 @@ def post_cliente(corpo: Cliente):
 def post_cliente(corpo: Cliente):
     try:
         session = db.Session()
-        dados = ClienteDB(None, corpo.nome, corpo.cpf, corpo.telefone, corpo.compra_fiado, corpo.senha)
+        dados = ClienteDB(None, corpo.nome, corpo.cpf, corpo.telefone, corpo.compra_fiado, corpo.dia_fiado, corpo.senha)
         session.add(dados)
         session.commit()
         return {"id": dados.id_cliente}, 200
@@ -69,7 +69,7 @@ def post_cliente(corpo: Cliente):
 def post_cliente(corpo: Cliente):
     try:
         session = db.Session()
-        dados = ClienteDB(None, corpo.nome, corpo.cpf, corpo.telefone, corpo.compra_fiado, corpo.senha)
+        dados = ClienteDB(None, corpo.nome, corpo.cpf, corpo.telefone, corpo.compra_fiado, corpo.dia_fiado, corpo.senha)
         session.add(dados)
         session.commit()
         return {"id": dados.id_cliente}, 200
@@ -89,6 +89,7 @@ def put_cliente(id: int, corpo: Cliente):
         dados.telefone = corpo.telefone
         dados.senha = corpo.senha
         dados.compra_fiado = corpo.compra_fiado
+        dados.dia_fiado = corpo.dia_fiado
         session.add(dados)
         session.commit()
         return {"id": dados.id_cliente}, 200
