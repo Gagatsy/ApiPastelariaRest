@@ -14,9 +14,9 @@ app.include_router(ClienteDAO.router)
 app.include_router(ProdutoDAO.router)
 
 # rota padrão
-#@app.get("/")
-#def root():
-#      return {"detail":"API Pastelaria", "Swagger UI": "http://127.0.0.1:8000/docs", "ReDoc": "http://127.0.0.1:8000/redoc" }
+@app.get("/")
+def root():
+      return {"detail":"API Pastelaria", "Swagger UI": "http://127.0.0.1:8000/docs", "ReDoc": "http://127.0.0.1:8000/redoc" }
 
 # cria, caso não existam, as tabelas de todos os modelos importados
 import db
