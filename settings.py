@@ -1,4 +1,3 @@
-from urllib.parse import quote # por causa do @ na senha...
 from dotenv import load_dotenv, find_dotenv
 import os
 
